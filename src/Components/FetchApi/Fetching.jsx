@@ -100,9 +100,13 @@ function Fetching() {
         <p className="mt-2 text-danger fw-bolder">No books found !</p>
       )} */}
       <DisplayData infos={infos} />
-      <button className="rounded-1 p-2 bg-primary text-white mx-2" onClick={handlePrevious}>Previous</button>
-      <button className="rounded-1 p-2 bg-primary text-white mx-2" >{currentPage}</button>
-      <button className="rounded-1 p-2 bg-primary text-white mx-2" onClick={handleNext}>Next</button>
+      <button className="rounded-1 p-2 bg-primary text-white mx-2" onClick={handlePrevious} disabled={currentPage === 1}>
+  Previous
+</button>
+<button className="rounded-1 p-2 bg-primary text-white mx-2" >{currentPage}</button>
+<button className="rounded-1 p-2 bg-primary text-white mx-2" onClick={handleNext} disabled={currentPage === infos.length}>
+  Next
+</button>
       {/* <Pages
         totalpost={filteredInfos.length}
         paginate={paginate}

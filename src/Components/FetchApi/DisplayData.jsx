@@ -50,7 +50,7 @@ function DisplayData({ infos }) {
                   <Card.Text
                     className="authorName"
                     onClick={() => {
-                      handleAuthor(ele?.author_name[0]);
+                      handleAuthor(ele?.author_name);
                     }}
                   >
                     By : {ele?.author_name[0]}
